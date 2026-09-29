@@ -1,0 +1,839 @@
+
+/* =================================
+   A CHAPTER CALLED YOU
+   Editorial Graduation Edition
+================================= */
+
+
+:root {
+    --bg: #101C35;
+    --bg-light: #1B2D4D;
+    --rose: #91B9E8;
+    --gold: #C4D4EC;
+    --cream: #EAF0FA;
+    --muted: #A8BAD5;
+    --line: rgba(196, 212, 236, 0.25);
+
+    /* Warna tambahan */
+    --brown: #EAF0FA;
+    --paper: #1B2D4D;
+    --rose-light: #91B9E8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    background: var(--bg);
+    color: #EAF0FA;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.section-padding {
+    padding: 100px 7%;
+}
+
+.eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--rose);
+    text-align: center;
+}
+
+
+/* =================================
+   OPENING
+================================= */
+
+.opening {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    isolation: isolate;
+    background:
+    radial-gradient(
+        ellipse at 50% 40%,
+        #1B2D4D 0%,
+        #101C35 70%,
+        #0A1326 100%
+        );
+    transition: opacity 0.8s ease;
+}
+
+.opening::before,
+.opening::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(145, 185, 232, 0.22);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.opening::before {
+    width: 320px;
+    height: 320px;
+    top: -170px;
+    right: -150px;
+}
+
+.opening::after {
+    width: 250px;
+    height: 250px;
+    bottom: -130px;
+    left: -120px;
+}
+
+.opening-content {
+    max-width: 500px;
+    width: 100%;
+    animation: fadeUp 1.2s ease both;
+}
+
+.opening-content .eyebrow {
+    margin-bottom: 35px;
+}
+
+.opening h1 {
+    font-size: clamp(55px, 12vw, 88px);
+    letter-spacing: -2.5px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.opening h1 span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.opening-subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 15px 28px;
+    border: 1px solid var(--rose);
+    background: var(--rose);
+    color: white;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(185, 130, 130, 0.18);
+}
+
+.primary-btn:hover {
+    background: #1B2D4D;
+    border-color: #91B9E8;
+    color: #EAF0FA;
+    transform: translateY(-3px);
+}
+
+.made-by {
+    margin-top: 65px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    top: -180px;
+    left: -100px;
+    pointer-events: none;
+}
+
+.hero-decoration {
+    color: var(--rose);
+    font-size: 32px;
+    margin-top: 40px;
+    animation: rotate 18s linear infinite;
+}
+
+.hero h2 {
+    font-size: clamp(80px, 16vw, 150px);
+    letter-spacing: -5px;
+    line-height: 0.95;
+    margin: 25px 0;
+}
+
+.hero h2 span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.hero-intro {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.graduate-name {
+    font-size: clamp(27px, 6vw, 43px);
+    margin: 12px 0;
+}
+
+.graduate-info {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.hero-line {
+    width: 45px;
+    height: 1px;
+    background: var(--rose);
+    margin: 30px 0;
+}
+
+.hero-caption {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+}
+
+.scroll-link {
+    margin-top: 55px;
+    color: var(--rose);
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.scroll-link:hover {
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   MEMORIES
+================================= */
+
+
+.memories {
+    background: #EAF0FA;
+    color: #182A47;
+    position: relative;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.section-heading {
+    max-width: 600px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(45px, 8vw, 65px);
+    line-height: 1.1;
+    margin: 22px 0;
+}
+
+.memories .eyebrow {
+    color: #6489BD;
+}
+
+.section-heading h2 {
+    color: #182A47;
+}
+
+.section-heading h2 span {
+    color: #6489BD;
+}
+
+.section-heading > p:last-child {
+    color: #7185A3;
+}
+
+.photo-card {
+    background: #FFFFFF;
+    border: 1px solid #D5E1F2;
+    box-shadow: 0 18px 50px rgba(7, 7, 8, 0.1);
+}
+
+.photo-card figcaption {
+    color: #7185A3;
+}
+
+.memories-footer {
+    color: #6489BD;
+}
+
+
+/* =================================
+   LETTER
+================================= */
+
+.letter-section {
+    background: #101C35;
+    color: #EAF0FA;
+    text-align: center;
+    position: relative;
+}
+
+.letter-intro {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.letter-intro > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.letter-paper {
+    position: relative;
+    max-width: 600px;
+    margin: 55px auto 0;
+    padding: clamp(30px, 7vw, 65px);
+    text-align: left;
+    background: #1B2D4D;
+    color: #EAF0FA;
+    border: 1px solid rgba(145, 185, 232, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: fadeUp 0.8s ease both;
+}
+
+.letter-paper::before {
+    content: "♡";
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: var(--rose-light);
+    font-size: 25px;
+}
+
+.letter-date {
+    color: var(--rose);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.letter-paper h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.letter-paper > p:not(.letter-date) {
+    color: #C4D4EC;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.letter-paper .letter-closing {
+    color: var(--rose);
+    font-style: italic;
+    font-size: 23px;
+    margin-top: 35px;
+}
+
+.letter-signature {
+    margin-top: 30px;
+}
+
+.letter-signature span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 25px;
+    color: #91B9E8;
+}
+
+
+/* =================================
+   FINAL
+================================= */
+
+.final-section {
+    min-height: 90svh;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #1B2D4D 0%,
+            #101C35 75%,
+            #0A1326 100%
+        );
+    color: #EAF0FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.final-section h2 {
+    color: #EAF0FA;
+}
+
+.final-section h2 span {
+    color: #91B9E8;
+}
+
+.final-congrats {
+    color: #EAF0FA;
+}
+
+.final-message,
+.final-signature {
+    color: #A8BAD5;
+}
+
+.final-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.final-star {
+    font-size: 38px;
+    color: var(--rose);
+    margin: 35px 0;
+    animation: rotate 20s linear infinite;
+}
+
+.final-section h2 {
+    font-size: clamp(45px, 9vw, 85px);
+    letter-spacing: -2px;
+}
+
+.final-section h2 span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.final-message {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 30px 0;
+}
+
+.final-congrats {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    margin: 35px 0 5px;
+}
+
+.final-signature {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+.final-surprise {
+    max-width: 320px;
+    margin: 35px auto 0;
+    color: var(--rose);
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 18px;
+    animation: fadeUp 0.8s ease both;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: var(--bg);
+}
+
+footer p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .section-padding {
+        padding: 85px 23px;
+    }
+
+    .opening {
+        padding: 25px;
+    }
+
+    .opening h1 {
+        font-size: clamp(48px, 13vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .opening-content .eyebrow {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .opening-subtitle {
+        font-size: 12px;
+    }
+
+    .made-by {
+        margin-top: 55px;
+    }
+
+    .hero {
+        min-height: 90svh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h2 {
+        font-size: clamp(75px, 20vw, 105px);
+        letter-spacing: -4px;
+    }
+
+    .hero-decoration {
+        margin-top: 30px;
+    }
+
+    .graduate-name {
+        font-size: 29px;
+    }
+
+    .graduate-info {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .scroll-link {
+        margin-top: 45px;
+        font-size: 10px;
+    }
+
+
+/* MEMORIES - MOBILE FIX */
+
+.memories.section-padding {
+    padding: 70px 22px;
+    overflow: hidden;
+}
+
+.section-heading {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.section-heading > p:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 290px;
+    margin: 0 auto;
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 45px;
+    margin: 0;
+}
+
+.photo-card,
+.photo-card:nth-child(3) {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.photo-card > .eyebrow {
+    text-align: left;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: #6489BD;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.photo-card figcaption {
+    display: block;
+    width: 100%;
+    padding: 20px 12px 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #354967;
+    text-align: left;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.photo-card figcaption p {
+    margin: 0 0 18px;
+}
+
+.photo-card figcaption p:last-child {
+    margin-bottom: 0;
+}
+
+.photo-offset {
+    margin: 0;
+}
+
+.memories-footer {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    margin-top: 40px;
+}
+
+    .letter-paper {
+        margin-top: 40px;
+        padding: 30px 24px;
+    }
+
+    .letter-paper h3 {
+        font-size: 23px;
+    }
+
+    .letter-paper > p:not(.letter-date) {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .final-section {
+        min-height: 85svh;
+        padding: 80px 23px;
+    }
+
+    .final-section h2 {
+        font-size: clamp(43px, 11vw, 58px);
+        letter-spacing: -1.5px;
+    }
+
+    .final-message {
+        max-width: 270px;
+        margin: 25px auto;
+    }
+
+    .primary-btn {
+        padding: 14px 24px;
+        font-size: 12px;
+    }
+}
+
+
+/* Reduce animation for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.memory-card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .memory-card img {
+        height: 80px;
+    }
+
+    .memory-gallery {
+        max-width: 280px;
+        gap: 6px;
+    }
+}
+
+/* FIX HERO GRADUATION */
+.hero {
+    min-height: 100svh;
+    padding: 70px 20px 45px;
+    color: #EAF0FA;
+}
+
+.hero h2,
+.hero .graduate-name {
+    color: #EAF0FA;
+}
+
+.hero h2 {
+    margin: 18px 0;
+    font-size: clamp(75px, 18vw, 110px);
+    line-height: 0.95;
+}
+
+.hero h2 span {
+    color: #91B9E8;
+}
+
+.hero .graduate-name {
+    font-size: clamp(25px, 6vw, 36px);
+    margin: 12px 0;
+}
+
+.hero .hero-decoration {
+    margin-top: 20px;
+}
+
+.hero .hero-caption {
+    color: #A8BAD5;
+}
+
+.hero .eyebrow {
+    color: #91B9E8;
+}
